@@ -163,8 +163,8 @@
 					button.removeAttribute("disabled");
 					console.log("TT - Failed to request a revive with Imperium!", response);
 				}
-			} else if (provider === "hela" || provider === "shadow_healers") {
-				const providers = { hela: "HeLa", shadow_healers: "Shadow Healers" };
+			} else if (provider === "hela" || provider === "shadow_healers" || provider === 'midnight_x') {
+				const providers = { hela: "HeLa", shadow_healers: "Shadow Healers", midnight_x: "Midnight X" };
 				const response = await fetchData(provider, {
 					section: "request",
 					method: "POST",
