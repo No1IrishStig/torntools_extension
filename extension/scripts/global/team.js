@@ -141,7 +141,7 @@ const TEAM = [
 		color: "#7E46DA",
 	},
 	{
-		name: "No1IrishStig",
+		name: "Stig",
 		title: "Developer",
 		core: false,
 		torn: 2648238,
