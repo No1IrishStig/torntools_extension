@@ -22,6 +22,7 @@ const FETCH_PLATFORMS = {
 	prometheus: "https://prombot.co.uk:8443/",
 	lzpt: "https://api.lzpt.io/",
 	wtf: "https://what-the-f.de/",
+	midnight_x: "https://api.no1irishstig.co.uk/",
 };
 
 const FACTION_ACCESS = {
