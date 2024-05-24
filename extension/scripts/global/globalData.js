@@ -2,7 +2,7 @@
 
 chrome = typeof browser !== "undefined" ? browser : chrome;
 
-window.isfeatureManagerLoaded = false;
+let isfeatureManagerLoaded = false;
 
 const FORUM_POST = "https://www.torn.com/forums.php#/p=threads&f=67&t=16243863";
 
@@ -81,7 +81,7 @@ const ttStorage = new (class {
 	reset(key) {
 		return new Promise(async (resolve) => {
 			if (["attackHistory", "stakeouts"].includes(key)) {
-				await this.set({ [key]: getDefaultStorage(DEFAULT_STORAGE[key]) });
+				await this.set({ [key]: getDefaultStorage(DEFAULT_STORAGE)[key] });
 
 				resolve();
 			} else {
@@ -941,6 +941,27 @@ const DEFAULT_STORAGE = {
 	usage: new DefaultSetting({ type: "object", defaultValue: {} }),
 	npcs: new DefaultSetting({ type: "object", defaultValue: {} }),
 	notificationHistory: new DefaultSetting({ type: "array", defaultValue: [] }),
+	notifications: new DefaultSetting({
+		type: "object",
+		defaultValue: {
+			events: {},
+			messages: {},
+			newDay: {},
+			energy: {},
+			happy: {},
+			nerve: {},
+			life: {},
+			travel: {},
+			drugs: {},
+			boosters: {},
+			medical: {},
+			hospital: {},
+			chain: {},
+			chainCount: {},
+			stakeouts: {},
+			npcs: {},
+		},
+	}),
 };
 
 const CUSTOM_LINKS_PRESET = {
